@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 
 
 const GuessWords = props => {
-    return <div></div>
+    let content;
+    if (props.gussedWords.length === 0) {
+        content = <span data-test="guess-instructions">
+            Try to guess something
+        </span>
+    }
+    return <div data-test="comp-gussed-words">
+        {content}
+    </div>
 }
 
 GuessWords.propTypes = {
